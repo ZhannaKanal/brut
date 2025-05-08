@@ -1,13 +1,9 @@
 <template>
-  <div>Lorem, ipsum dolor.</div>
+  <Footer></Footer>
 </template>
 
-<script>
-export default {
-  setup() {
-    return {};
-  },
-};
+<script setup>
+import Footer from '../components/MainFooter.vue';
 </script>
 
 <style lang="scss" scoped></style>
