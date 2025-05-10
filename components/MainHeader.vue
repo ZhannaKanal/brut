@@ -5,19 +5,19 @@
         <div class="w-[24px] h-[24px]">
           <img src="../assets/icons/h_2.png" alt="" />
         </div>
-        <p class="">Алматы</p>
+        <nuxt-link class="no-underline" to="/main"><p class="text-[black]">Алматы</p></nuxt-link>
       </div>
       <div class="flex gap-[4px] items-center">
         <div class="w-[24px] h-[24px] flex justify-center">
           <img src="../assets/icons/h_3.png" alt="" />
         </div>
-        <p class="">Адреса магазинов</p>
+        <nuxt-link class="no-underline" to="/main"><p class="text-[15px] text-[black]">Адреса магазинов</p></nuxt-link>
       </div>
       <div class="flex gap-[4px] items-center">
         <div class="w-[24px] h-[24px] flex justify-center">
           <img src="../assets/icons/h_4.png" alt="" />
         </div>
-        <p class="">О компании</p>
+        <nuxt-link class="no-underline" to="/main"><p class="text-[15px] text-[black]">О компании</p></nuxt-link>
       </div>
     </div>
     <div class="">
