@@ -1,6 +1,7 @@
 <template>
   <Header></Header>
   <SecondHeader></SecondHeader>
+  <FirstBody></FirstBody>
   <Footer></Footer>
 </template>
 
@@ -8,6 +9,7 @@
 import Footer from '../components/MainFooter.vue';
 import Header from '../components/MainHeader.vue'
 import SecondHeader from '~/components/SecondHeader.vue';
+import FirstBody from '~/components/FirstBody.vue';
 </script>
 
 <style lang="scss" scoped></style>
