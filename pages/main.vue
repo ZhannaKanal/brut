@@ -1,6 +1,7 @@
 <template>
-    <div>
-        Main
+    <div class="my-[400px]  text-center text-[96px]">
+        <nuxt-link class="no-underline" to="/">Plivveet</nuxt-link>
+        
     </div>
 </template>
 
