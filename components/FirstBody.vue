@@ -198,6 +198,7 @@
       </div>
     </div>
   </div>
+
   <div class="max-w-[1200px] w-full mx-auto my-[20px]">
     <div class="flex items-center gap-[36px]">
       <p class="text-[24px]">АКЦИИ</p>
@@ -215,39 +216,58 @@
       <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
     </div>
     <div class="flex justify-between w-full gap-[20px]">
-      <div class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]">
+      <div
+        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+      >
         <img src="../assets/icons/i_31.png" alt="" />
         <p>Сет</p>
         <p>Set of Col de Sasso and Centinel</p>
         <p>0.75 л</p>
         <p class="text-[24px] my-[10px]">34000 тг</p>
-        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]">
-        <button type="submit" class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"><img class="mx-auto" src="../assets/icons/i_34.png" alt=""></button>
+        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
+        <button
+          type="submit"
+          class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
+        >
+          <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
+        </button>
       </div>
-      <div class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]">
+      <div
+        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+      >
         <img src="../assets/icons/i_32.png" alt="" />
         <p>Сет</p>
         <p>Set of Col de Sasso and Centinel</p>
         <p>0.75 л</p>
         <p class="text-[24px] my-[10px]">34000 тг</p>
-        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]">
-        <button type="submit" class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"><img class="mx-auto" src="../assets/icons/i_34.png" alt=""></button>
+        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
+        <button
+          type="submit"
+          class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
+        >
+          <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
+        </button>
       </div>
-      <div class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]">
+      <div
+        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+      >
         <img src="../assets/icons/i_33.png" alt="" />
         <p>Сет</p>
         <p>Set of Col de Sasso and Centinel</p>
         <p>0.75 л</p>
         <p class="text-[24px] my-[10px]">34000 тг</p>
-        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]">
-        <button type="submit" class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"><img class="mx-auto" src="../assets/icons/i_34.png" alt=""></button>
+        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
+        <button
+          type="submit"
+          class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
+        >
+          <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
+        </button>
       </div>
-      
     </div>
-    
   </div>
 
-  <div class="max-w-[1200px] w-full mx-auto">
+  <div class="max-w-[1200px] w-full mx-auto my-[20px]">
     <div class="flex items-center gap-[36px]">
       <p class="text-[24px]">ВЫСШИЙ РЕЙТИНГ</p>
       <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
@@ -442,6 +462,25 @@
             <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1200px] w-full mx-auto my-[20px]">
+    <div class="flex items-center gap-[36px]">
+      <p class="text-[24px]">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</p>
+      <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
+    </div>
+    <div class="flex justify-between gap-[20px] text-[white] text-[24px]">
+      <div class="relative  w-[590px]">
+        <img src="../assets/icons/i_51.png" alt="" class="w-full h-auto" />
+        <img src="../assets/icons/i_53.png" alt="" class="absolute top-[210px] left-[10px]" />
+        <p class="absolute bottom-[0] left-[165px]">Персонализация бутылок</p>
+      </div>
+      <div class="relative">
+        <img src="../assets/icons/i_52.png" alt="" class="w-[590px] h-auto" />
+        <img src="../assets/icons/i_54.png" alt="" class="absolute top-[210px] right-[10px]" />
+        <p class="absolute bottom-[10px] left-[195px]">Подарочные наборы</p>
       </div>
     </div>
   </div>
