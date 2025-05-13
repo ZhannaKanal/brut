@@ -1,5 +1,42 @@
 <template>
-  <div class="my-[100px] text-[64px] flex justify-center">CAROUSEL</div>
+  <div class="carousel relative max-w-[1200px] w-full mx-auto my-[50px] overflow-hidden "
+  >
+    <div class="carousel-track flex transition-transform duration-500 ease-in-out w-full"
+      :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+    >
+      <div class="carousel-slide relative min-w-full flex-shrink-0"
+        v-for="(slide, index) in slides"
+        :key="index"
+      >
+        <img :src="slide.image" alt="Slide" class="w-[1200px] h-auto block " />
+      </div>
+    </div>
+
+    <button
+      @click="prevSlide"
+      class="absolute left-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+    >
+      <img src="../assets/icons/i_53.png" alt="" />
+    </button>
+    <button
+      @click="nextSlide"
+      class="absolute right-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+    >
+      <img src="../assets/icons/i_54.png" alt="" />
+    </button>
+
+    <div
+      class="carousel-dots absolute bottom-[15px] left-1/2 -translate-x-1/2 z-[3]"
+    >
+      <span
+        class="inline-block w-[12px] h-[12px] mx-[10px] bg-[#FFFFFF99] rounded-full cursor-pointer transition-colors duration-300"
+        v-for="(_, index) in slides"
+        :key="index"
+        :class="{ active: index === currentIndex }"
+        @click="goToSlide(index)"
+      ></span>
+    </div>
+  </div>
   <div class="max-w-[1200px] w-full mx-auto">
     <div class="flex items-center gap-[36px]">
       <p class="text-[24px]">ВИНА МЕСЯЦА</p>
@@ -894,159 +931,47 @@
       Республики Казахстан от 27 сентября 2007 г. № 612.
     </p>
   </div>
-
-  <div class="carousel">
-    <!-- Slides Track -->
-    <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
-        <img :src="slide.image" alt="Slide" />
-        <div class="overlay">
-          <h2>{{ slide.title }}</h2>
-          <p>{{ slide.text }}</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Prev & Next Buttons -->
-    <button @click="prevSlide" class="carousel-btn prev">‹</button>
-    <button @click="nextSlide" class="carousel-btn next">›</button>
-
-    <!-- Dots -->
-    <div class="carousel-dots">
-      <span
-        v-for="(_, index) in slides"
-        :key="index"
-        :class="{ active: index === currentIndex }"
-        @click="goToSlide(index)"
-      ></span>
-    </div>
-  </div>
-
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
+import i1 from "@/assets/icons/i_1.png";
 
 const slides = ref([
   {
-    image: 'https://picsum.photos/id/1015/600/300',
-    title: 'Mountain View',
-    text: 'A scenic mountain landscape during sunrise.'
+    image: i1,
+    title: "Mountain View",
+    text: "A scenic mountain landscape during sunrise.",
   },
   {
-    image: 'https://picsum.photos/id/1016/600/300',
-    title: 'Peaceful Lake',
-    text: 'Reflection of the forest on a still lake.'
+    image: i1,
+    title: "Peaceful Lake",
+    text: "Reflection of the forest on a still lake.",
   },
   {
-    image: 'https://picsum.photos/id/1018/600/300',
-    title: 'Sunset Sky',
-    text: 'The golden hour casting warm light over the hills.'
-  }
-])
+    image: i1,
+    title: "Sunset Sky",
+    text: "The golden hour casting warm light over the hills.",
+  },
+]);
 
-const currentIndex = ref(0)
+const currentIndex = ref(0);
 
 function nextSlide() {
-  currentIndex.value = (currentIndex.value + 1) % slides.value.length
+  currentIndex.value = (currentIndex.value + 1) % slides.value.length;
 }
 
 function prevSlide() {
-  currentIndex.value = (currentIndex.value - 1 + slides.value.length) % slides.value.length
+  currentIndex.value =
+    (currentIndex.value - 1 + slides.value.length) % slides.value.length;
 }
 
 function goToSlide(index) {
-  currentIndex.value = index
+  currentIndex.value = index;
 }
 </script>
 
-
 <style scoped>
-.carousel {
-  position: relative;
-  width: 600px;
-  overflow: hidden;
-  margin: auto;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
-}
-
-.carousel-slide {
-  position: relative;
-  min-width: 100%;
-  flex-shrink: 0;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Text overlay */
-.overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 12px 16px;
-  border-radius: 8px;
-}
-
-.overlay h2 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.overlay p {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
-}
-
-/* Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  cursor: pointer;
-  padding: 0 10px;
-  z-index: 1;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* Dots */
-.carousel-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 4px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
 .carousel-dots .active {
-  background: #333;
+  background: white;
 }
 </style>
-
