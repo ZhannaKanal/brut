@@ -17,14 +17,18 @@
           <img src="../assets/icons/i_11.png" alt="" />
         </div>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class=" flex justify-between items-start">
+        <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
-          <div class="relative ">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"/>
+          <div class="relative">
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -62,14 +66,18 @@
           <img src="../assets/icons/i_11.png" alt="" />
         </div>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class=" flex justify-between items-start">
+        <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
-          <div class="relative ">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"/>
+          <div class="relative">
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -107,14 +115,18 @@
           <img src="../assets/icons/i_11.png" alt="" />
         </div>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class=" flex justify-between items-start">
+        <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
-          <div class="relative ">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"/>
+          <div class="relative">
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -152,14 +164,18 @@
           <img src="../assets/icons/i_11.png" alt="" />
         </div>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class=" flex justify-between items-start">
+        <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
-          <div class="relative ">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"/>
+          <div class="relative">
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -197,14 +213,18 @@
           <img src="../assets/icons/i_11.png" alt="" />
         </div>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class=" flex justify-between items-start">
+        <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
-          <div class="relative ">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"/>
+          <div class="relative">
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -231,7 +251,6 @@
           </button>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -253,7 +272,7 @@
     </div>
     <div class="flex justify-between w-full gap-[20px]">
       <div
-        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
       >
         <img src="../assets/icons/i_31.png" alt="" />
         <p>Сет</p>
@@ -269,7 +288,7 @@
         </button>
       </div>
       <div
-        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
       >
         <img src="../assets/icons/i_32.png" alt="" />
         <p>Сет</p>
@@ -285,7 +304,7 @@
         </button>
       </div>
       <div
-        class="text-center text-[18px] px-[60px] border-[1px] border-solid border-[#D0D0D0]"
+        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
       >
         <img src="../assets/icons/i_33.png" alt="" />
         <p>Сет</p>
@@ -323,11 +342,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -368,11 +391,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -413,11 +440,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -458,11 +489,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -503,11 +538,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -584,11 +623,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -629,11 +672,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -674,11 +721,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -719,11 +770,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -764,11 +819,15 @@
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative group">
-            <img src="../assets/icons/i_13.png" alt="" class="transition-transform duration-300 group-hover:scale-115"/>
+            <img
+              src="../assets/icons/i_13.png"
+              alt=""
+              class="transition-transform duration-300 group-hover:scale-115"
+            />
             <img
               src="../assets/icons/i_15.png"
               alt=""
-              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block "
+              class="absolute top-[70px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
           <img src="../assets/icons/i_12.png" alt="" />
@@ -836,10 +895,158 @@
     </p>
   </div>
 
-</template>
+  <div class="carousel">
+    <!-- Slides Track -->
+    <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+      <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
+        <img :src="slide.image" alt="Slide" />
+        <div class="overlay">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.text }}</p>
+        </div>
+      </div>
+    </div>
 
-<script>
-export default {};
+    <!-- Prev & Next Buttons -->
+    <button @click="prevSlide" class="carousel-btn prev">‹</button>
+    <button @click="nextSlide" class="carousel-btn next">›</button>
+
+    <!-- Dots -->
+    <div class="carousel-dots">
+      <span
+        v-for="(_, index) in slides"
+        :key="index"
+        :class="{ active: index === currentIndex }"
+        @click="goToSlide(index)"
+      ></span>
+    </div>
+  </div>
+
+</template>
+<script setup>
+import { ref } from 'vue'
+
+const slides = ref([
+  {
+    image: 'https://picsum.photos/id/1015/600/300',
+    title: 'Mountain View',
+    text: 'A scenic mountain landscape during sunrise.'
+  },
+  {
+    image: 'https://picsum.photos/id/1016/600/300',
+    title: 'Peaceful Lake',
+    text: 'Reflection of the forest on a still lake.'
+  },
+  {
+    image: 'https://picsum.photos/id/1018/600/300',
+    title: 'Sunset Sky',
+    text: 'The golden hour casting warm light over the hills.'
+  }
+])
+
+const currentIndex = ref(0)
+
+function nextSlide() {
+  currentIndex.value = (currentIndex.value + 1) % slides.value.length
+}
+
+function prevSlide() {
+  currentIndex.value = (currentIndex.value - 1 + slides.value.length) % slides.value.length
+}
+
+function goToSlide(index) {
+  currentIndex.value = index
+}
 </script>
 
-<style lang="scss" scoped></style>
+
+<style scoped>
+.carousel {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-slide {
+  position: relative;
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text overlay */
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.overlay p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots .active {
+  background: #333;
+}
+</style>
+
