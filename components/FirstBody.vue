@@ -1,14 +1,17 @@
 <template>
-  <div class="carousel relative max-w-[1200px] w-full mx-auto my-[50px] overflow-hidden "
+  <div
+    class="carousel relative max-w-[1200px] w-full mx-auto my-[50px] overflow-hidden"
   >
-    <div class="carousel-track flex transition-transform duration-500 ease-in-out w-full"
+    <div
+      class="carousel-track flex transition-transform duration-500 ease-in-out w-full"
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
     >
-      <div class="carousel-slide relative min-w-full flex-shrink-0"
-        v-for="(slide, index) in slides"
+      <div
+        class="carousel-slide relative min-w-full flex-shrink-0"
+        v-for="slide in bannerImg"
         :key="index"
       >
-        <img :src="slide.image" alt="Slide" class="w-[1200px] h-auto block " />
+        <img :src="slide.image" alt="Slide" class="w-[1200px] h-auto block" />
       </div>
     </div>
 
@@ -37,6 +40,7 @@
       ></span>
     </div>
   </div>
+
   <div class="max-w-[1200px] w-full mx-auto">
     <div class="flex items-center gap-[36px]">
       <p class="text-[24px]">ВИНА МЕСЯЦА</p>
@@ -900,16 +904,9 @@
       <hr class="flex-1 border-0 h-[0px] bg-[#D0D0D0]" />
     </div>
     <div class="grid grid-cols-5 place-items-center gap-[50px]">
-      <img src="../assets/icons/i_70.svg" alt="" />
-      <img src="../assets/icons/i_72.svg" alt="" />
-      <img src="../assets/icons/i_73.svg" alt="" />
-      <img src="../assets/icons/i_74.svg" alt="" />
-      <img src="../assets/icons/i_75.svg" alt="" />
-      <img src="../assets/icons/i_76.svg" alt="" />
-      <img src="../assets/icons/i_77.svg" alt="" />
-      <img src="../assets/icons/i_78.svg" alt="" />
-      <img src="../assets/icons/i_79.svg" alt="" />
-      <img src="../assets/icons/i_80.svg" alt="" />
+      <div v-for="brand in alcoholList.slice(0, 10)" :key="brand.id">
+        <img class="w-full" :src="brand.logo" alt="" />
+      </div>
     </div>
   </div>
 
@@ -931,43 +928,60 @@
       Республики Казахстан от 27 сентября 2007 г. № 612.
     </p>
   </div>
+
+
+  <div class="max-w-[1200px] w-full mx-auto">
+    Banner
+    <div v-for="banner in bannerImg" :key="banner.id">
+      <img class="w-full h-full" :src="banner.image" alt="" />
+    </div>
+  </div>
 </template>
 <script setup>
-import { ref } from "vue";
-import i1 from "@/assets/icons/i_1.png";
-
-const slides = ref([
-  {
-    image: i1,
-    title: "Mountain View",
-    text: "A scenic mountain landscape during sunrise.",
-  },
-  {
-    image: i1,
-    title: "Peaceful Lake",
-    text: "Reflection of the forest on a still lake.",
-  },
-  {
-    image: i1,
-    title: "Sunset Sky",
-    text: "The golden hour casting warm light over the hills.",
-  },
-]);
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
 const currentIndex = ref(0);
 
 function nextSlide() {
-  currentIndex.value = (currentIndex.value + 1) % slides.value.length;
+  currentIndex.value = (currentIndex.value + 1) % bannerImg.value.length;
 }
 
 function prevSlide() {
   currentIndex.value =
-    (currentIndex.value - 1 + slides.value.length) % slides.value.length;
+    (currentIndex.value - 1 + bannerImg.value.length) % bannerImg.value.length;
 }
 
 function goToSlide(index) {
   currentIndex.value = index;
 }
+
+const alcoholList = ref([]);
+
+const getAlcohols = async () => {
+  try {
+    const response = await axios.get("https://brut.kz/api/brands");
+    alcoholList.value = response.data; // or adjust based on actual structure
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+  }
+};
+const bannerImg = ref([]);
+
+const getBanner = async () => {
+  try {
+    const response = await axios.get("https://brut.kz/api/1/slides");
+    console.log("Response:", response.data[1].image);
+    bannerImg.value = response.data; // or adjust based on actual structure
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+  }
+};
+
+onMounted(() => {
+  getBanner();
+  getAlcohols();
+});
 </script>
 
 <style scoped>
