@@ -46,247 +46,56 @@
       <p class="text-[24px]">ВИНА МЕСЯЦА</p>
       <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
     </div>
-    <div class="w-full flex gap-[15px]">
+    <div class="w-full grid grid-cols-5 gap-[40px]">
       <div
-        class="group mb-[20px] max-w-[228px] w-full border-[1px] border-solid border-[#D0D0D0] text-[14px] px-[12px]"
+        v-for="wine in wineList.slice(5, 10)"
+        :key="wine.id"
+        class="group mb-[20px] max-w-[228px] w-full text-[14px] px-[12px]"
       >
-        <div class="flex justify-between items-center gap-[6px]">
-          <p class="">
-            Вино Chianti Castiglioni, <br />
-            Frescobaldi, 2019 г.
-          </p>
-          <img src="../assets/icons/i_11.png" alt="" />
+        <div class="min-h-[60px] flex justify-between items-center gap-[6px]">
+          <p>{{ wine.name }}</p>
+          <img src="../assets/icons/i_11.png" alt="i11" />
         </div>
+
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
+
         <div class="flex justify-between items-start">
           <p class="mt-[-1px]">56955</p>
           <div class="relative">
             <img
-              src="../assets/icons/i_13.png"
-              alt=""
-              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
+              :src="wine.image"
+              alt="i13"
+              class="w-[40px] h-[150px] transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
             />
             <img
               src="../assets/icons/i_15.png"
-              alt=""
+              alt="i15"
               class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
             />
           </div>
-          <img src="../assets/icons/i_12.png" alt="" />
+          <img src="../assets/icons/i_12.png" alt="i12" />
         </div>
+
         <p class="text-center text-[12px] text-[#787878] group-hover:invisible">
-          Италия, белое сухое, 1л
+         Италия, белое сухое, 1л
         </p>
+
         <hr class="my-[28px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <p class="text-[] text-center mb-[-4px]">34000 тг</p>
+
+        <p class="text-center mb-[-4px]">{{ wine.price }} тг</p>
+
         <div
           class="my-[6px] max-h-[30px] h-full flex justify-between items-center gap-[4px]"
         >
           <div
-            class="flex-1 flex justify-between border-[1px] border-sold border-[black] px-[6px] py-[4px]"
+            class="flex-1 flex justify-between border-[1px] border-solid border-[black] px-[6px] py-[4px]"
           >
             <button class="border-none bg-transparent">−</button>
-            <span class="">1</span>
+            <span>1</span>
             <button class="border-none bg-transparent">+</button>
           </div>
           <button
-            class="w-1/2 bg-[black] border-none flex justify-center items-center py-[4px]"
-          >
-            <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
-          </button>
-        </div>
-      </div>
-      <div
-        class="group mb-[20px] max-w-[228px] w-full border-[1px] border-solid border-[#D0D0D0] text-[14px] px-[12px]"
-      >
-        <div class="flex justify-between items-center gap-[6px]">
-          <p class="">
-            Вино Chianti Castiglioni, <br />
-            Frescobaldi, 2019 г.
-          </p>
-          <img src="../assets/icons/i_11.png" alt="" />
-        </div>
-        <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class="flex justify-between items-start">
-          <p class="mt-[-1px]">56955</p>
-          <div class="relative">
-            <img
-              src="../assets/icons/i_13.png"
-              alt=""
-              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
-            />
-            <img
-              src="../assets/icons/i_15.png"
-              alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
-            />
-          </div>
-          <img src="../assets/icons/i_12.png" alt="" />
-        </div>
-        <p class="text-center text-[12px] text-[#787878] group-hover:invisible">
-          Италия, белое сухое, 1л
-        </p>
-        <hr class="my-[28px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <p class="text-[] text-center mb-[-4px]">34000 тг</p>
-        <div
-          class="my-[6px] max-h-[30px] h-full flex justify-between items-center gap-[4px]"
-        >
-          <div
-            class="flex-1 flex justify-between border-[1px] border-sold border-[black] px-[6px] py-[4px]"
-          >
-            <button class="border-none bg-transparent">−</button>
-            <span class="">1</span>
-            <button class="border-none bg-transparent">+</button>
-          </div>
-          <button
-            class="w-1/2 bg-[black] border-none flex justify-center items-center py-[4px]"
-          >
-            <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
-          </button>
-        </div>
-      </div>
-      <div
-        class="group mb-[20px] max-w-[228px] w-full border-[1px] border-solid border-[#D0D0D0] text-[14px] px-[12px]"
-      >
-        <div class="flex justify-between items-center gap-[6px]">
-          <p class="">
-            Вино Chianti Castiglioni, <br />
-            Frescobaldi, 2019 г.
-          </p>
-          <img src="../assets/icons/i_11.png" alt="" />
-        </div>
-        <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class="flex justify-between items-start">
-          <p class="mt-[-1px]">56955</p>
-          <div class="relative">
-            <img
-              src="../assets/icons/i_13.png"
-              alt=""
-              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
-            />
-            <img
-              src="../assets/icons/i_15.png"
-              alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
-            />
-          </div>
-          <img src="../assets/icons/i_12.png" alt="" />
-        </div>
-        <p class="text-center text-[12px] text-[#787878] group-hover:invisible">
-          Италия, белое сухое, 1л
-        </p>
-        <hr class="my-[28px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <p class="text-[] text-center mb-[-4px]">34000 тг</p>
-        <div
-          class="my-[6px] max-h-[30px] h-full flex justify-between items-center gap-[4px]"
-        >
-          <div
-            class="flex-1 flex justify-between border-[1px] border-sold border-[black] px-[6px] py-[4px]"
-          >
-            <button class="border-none bg-transparent">−</button>
-            <span class="">1</span>
-            <button class="border-none bg-transparent">+</button>
-          </div>
-          <button
-            class="w-1/2 bg-[black] border-none flex justify-center items-center py-[4px]"
-          >
-            <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
-          </button>
-        </div>
-      </div>
-      <div
-        class="group mb-[20px] max-w-[228px] w-full border-[1px] border-solid border-[#D0D0D0] text-[14px] px-[12px]"
-      >
-        <div class="flex justify-between items-center gap-[6px]">
-          <p class="">
-            Вино Chianti Castiglioni, <br />
-            Frescobaldi, 2019 г.
-          </p>
-          <img src="../assets/icons/i_11.png" alt="" />
-        </div>
-        <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class="flex justify-between items-start">
-          <p class="mt-[-1px]">56955</p>
-          <div class="relative">
-            <img
-              src="../assets/icons/i_13.png"
-              alt=""
-              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
-            />
-            <img
-              src="../assets/icons/i_15.png"
-              alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
-            />
-          </div>
-          <img src="../assets/icons/i_12.png" alt="" />
-        </div>
-        <p class="text-center text-[12px] text-[#787878] group-hover:invisible">
-          Италия, белое сухое, 1л
-        </p>
-        <hr class="my-[28px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <p class="text-[] text-center mb-[-4px]">34000 тг</p>
-        <div
-          class="my-[6px] max-h-[30px] h-full flex justify-between items-center gap-[4px]"
-        >
-          <div
-            class="flex-1 flex justify-between border-[1px] border-sold border-[black] px-[6px] py-[4px]"
-          >
-            <button class="border-none bg-transparent">−</button>
-            <span class="">1</span>
-            <button class="border-none bg-transparent">+</button>
-          </div>
-          <button
-            class="w-1/2 bg-[black] border-none flex justify-center items-center py-[4px]"
-          >
-            <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
-          </button>
-        </div>
-      </div>
-      <div
-        class="group mb-[20px] max-w-[228px] w-full border-[1px] border-solid border-[#D0D0D0] text-[14px] px-[12px]"
-      >
-        <div class="flex justify-between items-center gap-[6px]">
-          <p class="">
-            Вино Chianti Castiglioni, <br />
-            Frescobaldi, 2019 г.
-          </p>
-          <img src="../assets/icons/i_11.png" alt="" />
-        </div>
-        <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
-        <div class="flex justify-between items-start">
-          <p class="mt-[-1px]">56955</p>
-          <div class="relative">
-            <img
-              src="../assets/icons/i_13.png"
-              alt=""
-              class="transition-transform duration-300 group-hover:scale-120 group-hover:translate-y-[30px]"
-            />
-            <img
-              src="../assets/icons/i_15.png"
-              alt=""
-              class="absolute top-[100px] right-[-11px] hidden rounded-[4px] group-hover:block"
-            />
-          </div>
-          <img src="../assets/icons/i_12.png" alt="" />
-        </div>
-        <p class="text-center text-[12px] text-[#787878] group-hover:invisible">
-          Италия, белое сухое, 1л
-        </p>
-        <hr class="my-[28px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <p class="text-[] text-center mb-[-4px]">34000 тг</p>
-        <div
-          class="my-[6px] max-h-[30px] h-full flex justify-between items-center gap-[4px]"
-        >
-          <div
-            class="flex-1 flex justify-between border-[1px] border-sold border-[black] px-[6px] py-[4px]"
-          >
-            <button class="border-none bg-transparent">−</button>
-            <span class="">1</span>
-            <button class="border-none bg-transparent">+</button>
-          </div>
-          <button
-            class="w-1/2 bg-[black] border-none flex justify-center items-center py-[4px]"
+            class="w-1/2 bg-[black] border-[1px] flex justify-center items-center py-[4px]"
           >
             <img src="../assets/icons/i_14.png" class="w-4 h-4" alt="Bin" />
           </button>
@@ -311,47 +120,18 @@
       <p class="text-[24px]">КОКТЕЙЛЬНЫЕ СЕТЫ</p>
       <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
     </div>
-    <div class="flex justify-between w-full gap-[20px]">
+    <div
+      class="max-w-[1200px] w-full mx-auto grid grid-cols-3 w-full gap-[20px]"
+    >
       <div
-        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
+        v-for="set in newList.slice(0, 3)"
+        :key="index"
+        class="text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
       >
-        <img src="../assets/icons/i_31.png" alt="" />
-        <p>Сет</p>
-        <p>Set of Col de Sasso and Centinel</p>
-        <p>0.75 л</p>
-        <p class="text-[24px] my-[10px]">34000 тг</p>
-        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <button
-          type="submit"
-          class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
-        >
-          <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
-        </button>
-      </div>
-      <div
-        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
-      >
-        <img src="../assets/icons/i_32.png" alt="" />
-        <p>Сет</p>
-        <p>Set of Col de Sasso and Centinel</p>
-        <p>0.75 л</p>
-        <p class="text-[24px] my-[10px]">34000 тг</p>
-        <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
-        <button
-          type="submit"
-          class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
-        >
-          <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
-        </button>
-      </div>
-      <div
-        class="max-w-[380px] w-full text-center text-[18px] border-[1px] border-solid border-[#D0D0D0]"
-      >
-        <img src="../assets/icons/i_33.png" alt="" />
-        <p>Сет</p>
-        <p>Set of Col de Sasso and Centinel</p>
-        <p>0.75 л</p>
-        <p class="text-[24px] my-[10px]">34000 тг</p>
+        <img class="w-auto max-h-[250px]" :src="set.image" alt="" />
+        <p>Set</p>
+        <p>{{ set.name }}</p>
+        <p class="text-[24px] my-[10px]">{{ set.price }} тг</p>
         <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
         <button
           type="submit"
@@ -930,13 +710,9 @@
   </div>
 
 
-  <div class="max-w-[1200px] w-full mx-auto">
-    Banner
-    <div v-for="banner in bannerImg" :key="banner.id">
-      <img class="w-full h-full" :src="banner.image" alt="" />
-    </div>
-  </div>
+
 </template>
+
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
@@ -971,17 +747,45 @@ const bannerImg = ref([]);
 const getBanner = async () => {
   try {
     const response = await axios.get("https://brut.kz/api/1/slides");
-    console.log("Response:", response.data[1].image);
     bannerImg.value = response.data; // or adjust based on actual structure
   } catch (error) {
     console.error("Error fetching brands:", error);
   }
 };
 
+const newList = ref([]);
+
+const getList = async () => {
+  try {
+    const response = await axios.get("https://brut.kz/api/cocktail-sets");
+    newList.value = response.data.products; // or adjust based on actual structure
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+  }
+};
+
+const wineList = ref([]);
+
+const getWine = async () => {
+  try {
+    const response = await axios.get(
+      "https://brut.kz/api/products/recommended/"
+    );
+    console.log("Response:", response.data.products);
+    wineList.value = response.data.products; // or adjust based on actual structure
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+  }
+};
+
 onMounted(() => {
+  getWine();
   getBanner();
   getAlcohols();
+  getList();
 });
+
+
 </script>
 
 <style scoped>
