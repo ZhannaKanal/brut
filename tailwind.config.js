@@ -6,7 +6,14 @@ export default {
     "./pages/**/*.{vue,js,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: "628px",
+        md: "768px",
+        lg: "1024px",
+      },
+    },
   },
+
   plugins: [],
 };

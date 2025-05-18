@@ -1,5 +1,6 @@
-<template>
-  <div
+<template class="px-[30px]">
+<div class="px-[20px]">
+    <div
     class="carousel relative max-w-[1200px] w-full mx-auto my-[50px] overflow-hidden"
   >
     <div
@@ -708,6 +709,7 @@
       Республики Казахстан от 27 сентября 2007 г. № 612.
     </p>
   </div>
+</div>
 
 
 
