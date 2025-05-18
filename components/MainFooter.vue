@@ -1,21 +1,23 @@
 <template>
   <div class="bg-[#2C2C2C]">
     <div class="bg-[#C49955] min-h-[16px] w-full"></div>
-    <div class="max-w-[1400px] w-full mx-auto flex justify-end">
-      <div
-        class="bg-[#C49955] w-[60px] h-[60px] flex items-center justify-center"
-      >
-        <img class="" src="../assets/icons/f_1.png" alt="" />
+    <div class="arrow">
+      <div class="max-w-[1400px] w-full mx-auto flex justify-end">
+        <div
+          class="bg-[#C49955] w-[60px] h-[60px] flex items-center justify-center"
+        >
+          <img class="" src="../assets/icons/f_1.png" alt="" />
+        </div>
       </div>
     </div>
-    <div class="max-w-[1200px] w-full mx-auto flex justify-between">
-      <div class="text-[white]">
+    <div class="container max-w-[1200px] w-full mx-auto flex justify-between">
+      <div class="con text-[white]">
         <p class="text-[30px] font-bold">МЫ НА СВЯЗИ!</p>
         <p class="leading-[18px]">
           Винные истории, акции и бонусы для своих. <br />
           Один клик - и у вас в почте.
         </p>
-        <div class="max-h-[36px] h-full flex justify-start gap-[4px]">
+        <div class="email max-h-[36px] h-full flex justify-start gap-[4px]">
           <input
             class="max-w-[220px] w-full p-[10px] border-[0.5px] border-solid border-[white] bg-[#2C2C2C] text-[white]"
             type="text"
@@ -46,19 +48,19 @@
         </div>
       </div>
       <div class="uppercase">
-        <p class="text-[20px] text-[white]">О BRUT</p>
+        <p class="upper text-[20px] text-[white]">О BRUT</p>
         <p class="text-[#B7B7B7] pt-[16px]">О магазине</p>
         <p class="text-[#B7B7B7]">События</p>
         <p class="text-[#B7B7B7]">система лояльности</p>
         <p class="text-[#B7B7B7]">Публичная оферта</p>
       </div>
       <div class="uppercase">
-        <p class="text-[20px] text-[white]">СОТРУДНИЧЕСТВО</p>
+        <p class="upper text-[20px] text-[white]">СОТРУДНИЧЕСТВО</p>
         <p class="text-[#B7B7B7] pt-[16px]">Корпоративным клиентам</p>
         <p class="text-[#B7B7B7]">ЧАСТНЫМ клиентам</p>
       </div>
       <div class="uppercase text-[white] text-[16px]">
-        <p class="text-[20px] text-white">КОНТАКТЫ</p>
+        <p class="upper text-[20px] text-white">КОНТАКТЫ</p>
         <div class="flex justify-start items-center gap-[5px]">
           <img src="../assets/icons/f_7.png" alt="" />
           <p>Алматы</p>
@@ -72,18 +74,23 @@
         <p class="text-white">brutwine@mail.ru</p>
       </div>
     </div>
-    <div class="max-w-[1350px] w-full mx-auto">
-      <hr class="h-[0.5px] bg-[#C49955] border-0" />
-    </div>
-    <div
-      class="max-w-[1100px] w-full mx-auto flex justify-between text-[#C9C9C9] text-[14px]"
-    >
-      <div class="gap-[50px] flex justify-between">
-        <p>@BRUT, 2021</p>
-        <p>Пользовательское соглашение и условия</p>
-        <p>Обработка персональных данных</p>
+    <div class="line">
+      <div class="max-w-[1350px] w-full">
+        <hr class="h-[0.5px] bg-[#C49955] border-0" />
       </div>
-      <p>Создание сайтов. Разработано Nidge Digital Agency</p>
+    </div>
+    <div class="last">
+      <div
+        class="max-w-[1100px] w-full mx-auto flex justify-between text-[#C9C9C9] text-[14px]"
+      >
+        <div class="gap-[50px] flex justify-between">
+          <p class="i">@BRUT, 2021</p>
+          <p>Пользовательское соглашение и условия</p>
+          <p>Обработка персональных данных</p>
+          <p class="hi hidden">@BRUT, 2021</p>
+        </div>
+        <p class="ki">Создание сайтов. Разработано Nidge Digital Agency</p>
+      </div>
     </div>
   </div>
 </template>
@@ -96,4 +103,34 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+@media (max-width: 1024px) {
+  .container {
+    display: block;
+    padding: 0 20px;
+  }
+  .line,
+  .last {
+    padding: 0 20px;
+  }
+  .last div {
+    display: block;
+    padding: 5px 0;
+  }
+  .i {
+    display: none;
+  }
+  .hi {
+    display: block;
+  }
+  .ki {
+    display: none;
+  }
+  .upper {
+    margin-top: 50px;
+  }
+  .arrow {
+    padding-right: 20px;
+  }
+}
+</style>
