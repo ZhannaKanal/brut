@@ -116,9 +116,50 @@
         <p class="text-[24px]">АКЦИИ</p>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
       </div>
-      <div class="flex justify-between gap-[20px]">
-        <img src="../assets/icons/i_21.png" alt="" class="w-[590px] h-auto" />
-        <img src="../assets/icons/i_22.png" alt="" class="w-[590px] h-auto" />
+      <div
+        class="carousel relative max-w-[1200px] w-full mx-auto overflow-hidden"
+      >
+        <div
+          class="carousel-track flex gap-[20px] transition-transform duration-500 ease-in-out w-full"
+          :style="{ transform: `translateX(-${currentIndex * 50}%)` }"
+        >
+          <div
+            class="carousel-slide relative min-w-[calc(50%-10px)]"
+            v-for="(slide, index) in bannerImg"
+            :key="index"
+          >
+            <img
+              :src="slide.image"
+              alt="Slide"
+              class="carousel-img w-full h-auto block"
+            />
+          </div>
+        </div>
+
+        <button
+          @click="prevSlide"
+          class="absolute left-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+        >
+          <img src="../assets/icons/i_53.png" alt="" />
+        </button>
+        <button
+          @click="nextSlide"
+          class="absolute right-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+        >
+          <img src="../assets/icons/i_54.png" alt="" />
+        </button>
+
+        <div
+          class="carousel-dots absolute bottom-[15px] left-1/2 -translate-x-1/2 z-[3]"
+        >
+          <span
+            class="inline-block w-[12px] h-[12px] mx-[10px] bg-[#FFFFFF99] rounded-full cursor-pointer transition-colors duration-300"
+            v-for="(_, index) in slides"
+            :key="index"
+            :class="{ active: index === currentIndex }"
+            @click="goToSlide(index)"
+          ></span>
+        </div>
       </div>
     </div>
 
@@ -128,7 +169,7 @@
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
       </div>
       <div
-        class="max-w-[1200px] w-full mx-auto grid grid-cols-3 w-full gap-[20px]"
+        class="sets max-w-[1200px] w-full mx-auto grid grid-cols-3 w-full gap-[20px]"
       >
         <div
           v-for="set in newList.slice(0, 3)"
@@ -148,6 +189,49 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <div
+      class="sets_media hidden relative max-w-[1200px] w-full mx-auto overflow-hidden"
+    >
+      <div
+        class="carousel-track flex transition-transform duration-500 ease-in-out border-[1px] border-solid border-[#D0D0D0]"
+        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+      >
+        <div
+          v-for="(set, index) in newList"
+          :key="index"
+          class="carousel-slide min-w-full text-center text-[18px]"
+        >
+          <img class="w-auto max-h-[250px] mx-auto" :src="set.image" alt="" />
+          <p>Set</p>
+          <p>{{ set.name }}</p>
+          <p class="text-[24px] my-[10px]">{{ set.price }} тг</p>
+          <hr class="my-[5px] border-0 h-[1px] bg-[#D0D0D0]" />
+          <button
+            type="submit"
+            class="mb-[6px] bg-[black] max-w-[100px] w-full mx-auto"
+          >
+            <img class="mx-auto" src="../assets/icons/i_34.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+
+      <button
+        @click="prevSlide"
+        class="absolute left-[10px] z-10 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer px-[10px]"
+      >
+        <img class="w-[50px] h-[16px]" src="../assets/icons/a_1.png" alt="Previous" />
+      </button>
+      <button
+        @click="nextSlide"
+        class="absolute right-[10px] z-10 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer px-[10px]"
+      >
+        <img class="w-[50px] h-[16px]" src="../assets/icons/a_2.png" alt="Next" />
+      </button>
+
+
     </div>
 
     <div class="max-w-[1200px] w-full mx-auto my-[20px]">
@@ -220,24 +304,52 @@
         <p class="text-[24px]">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</p>
         <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
       </div>
-      <div class="flex justify-between gap-[20px] text-[white] text-[24px]">
-        <div class="relative w-[590px]">
-          <img src="../assets/icons/i_51.png" alt="" class="w-full h-auto" />
-          <img
-            src="../assets/icons/i_53.png"
-            alt=""
-            class="absolute top-[210px] left-[10px]"
-          />
-          <p class="absolute bottom-[0] left-[165px]">Персонализация бутылок</p>
+      <div
+        class="carousel relative max-w-[1200px] w-full mx-auto overflow-hidden"
+      >
+        <div
+          class="carousel-track flex gap-[20px] transition-transform duration-500 ease-in-out w-full"
+          :style="{ transform: `translateX(-${currentIndex * 50}%)` }"
+        >
+          <div
+            class="carousel-slide relative min-w-[calc(50%-10px)]"
+            v-for="(slide, index) in bannerImg"
+            :key="index"
+          >
+            <img
+              :src="slide.image"
+              alt="Slide"
+              class="carousel-img w-full h-auto block"
+            />
+            <p class="absolute bottom-[0] text-[32px] text-[white]">
+              {{ slide.name }}
+            </p>
+          </div>
         </div>
-        <div class="relative">
-          <img src="../assets/icons/i_52.png" alt="" class="w-[590px] h-auto" />
-          <img
-            src="../assets/icons/i_54.png"
-            alt=""
-            class="absolute top-[210px] right-[10px]"
-          />
-          <p class="absolute bottom-[10px] left-[195px]">Подарочные наборы</p>
+
+        <button
+          @click="prevSlide"
+          class="absolute left-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+        >
+          <img src="../assets/icons/i_53.png" alt="" />
+        </button>
+        <button
+          @click="nextSlide"
+          class="absolute right-[10px] border-none cursor-pointer py-0 px-[10px] z-[3] top-1/2 bg-transparent"
+        >
+          <img src="../assets/icons/i_54.png" alt="" />
+        </button>
+
+        <div
+          class="carousel-dots absolute bottom-[15px] left-1/2 -translate-x-1/2 z-[3]"
+        >
+          <span
+            class="inline-block w-[12px] h-[12px] mx-[10px] bg-[#FFFFFF99] rounded-full cursor-pointer transition-colors duration-300"
+            v-for="(_, index) in slides"
+            :key="index"
+            :class="{ active: index === currentIndex }"
+            @click="goToSlide(index)"
+          ></span>
         </div>
       </div>
     </div>
@@ -374,6 +486,7 @@ const bannerImg = ref([]);
 const getBanner = async () => {
   try {
     const response = await axios.get("https://brut.kz/api/1/slides");
+    console.log("Response:", response.data);
     bannerImg.value = response.data; // or adjust based on actual structure
   } catch (error) {
     console.error("Error fetching brands:", error);
@@ -398,7 +511,6 @@ const getWine = async () => {
     const response = await axios.get(
       "https://brut.kz/api/products/recommended/"
     );
-    console.log("Response:", response.data.products);
     wineList.value = response.data.products; // or adjust based on actual structure
   } catch (error) {
     console.error("Error fetching brands:", error);
@@ -426,6 +538,23 @@ onMounted(() => {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4;
+  }
+  .carousel-slide {
+    min-width: 100%;
+  }
+
+  .carousel-track {
+    gap: 0;
+    padding: 0;
+  }
+  .carousel-slide p {
+    font-size: 24px;
+  }
+  .sets{
+    display: none;
+  }
+  .sets_media{
+    display: block;
   }
 }
 .custom-shadow {
