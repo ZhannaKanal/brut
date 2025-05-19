@@ -217,21 +217,26 @@
         </div>
       </div>
 
-
       <button
         @click="prevSlide"
         class="absolute left-[10px] z-10 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer px-[10px]"
       >
-        <img class="w-[50px] h-[16px]" src="../assets/icons/a_1.png" alt="Previous" />
+        <img
+          class="w-[50px] h-[16px]"
+          src="../assets/icons/a_1.png"
+          alt="Previous"
+        />
       </button>
       <button
         @click="nextSlide"
         class="absolute right-[10px] z-10 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer px-[10px]"
       >
-        <img class="w-[50px] h-[16px]" src="../assets/icons/a_2.png" alt="Next" />
+        <img
+          class="w-[50px] h-[16px]"
+          src="../assets/icons/a_2.png"
+          alt="Next"
+        />
       </button>
-
-
     </div>
 
     <div class="max-w-[1200px] w-full mx-auto my-[20px]">
@@ -424,10 +429,63 @@
         <p class="text-[24px]">БРЕНДЫ</p>
         <hr class="flex-1 border-0 h-[0px] bg-[#D0D0D0]" />
       </div>
-      <div class="grid grid-cols-5 place-items-center gap-[50px]">
+      <div class="brands grid grid-cols-5 place-items-center gap-[50px]">
         <div v-for="brand in alcoholList.slice(0, 10)" :key="brand.id">
           <img class="w-full" :src="brand.logo" alt="" />
         </div>
+      </div>
+    </div>
+
+    <div
+      class="carousel relative max-w-[1200px] w-full mx-auto overflow-hidden"
+    >
+      <!-- Track wrapper -->
+      <div
+        class="carousel-track flex transition-transform duration-500 ease-in-out"
+        :style="{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          width: `${pages.length * 100}%`,
+        }"
+      >
+        <!-- Each page -->
+        <div
+          v-for="(page, pageIndex) in pages"
+          :key="pageIndex"
+          class="grid grid-cols-2 gap-[30px] place-items-center w-full px-4 shrink-0"
+        >
+          <div
+            v-for="brand in page"
+            :key="brand.id"
+            class="w-full flex justify-center items-center"
+          >
+            <img class="max-w-[150px]" :src="brand.logo" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <button
+        @click="prevSlide"
+        class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full"
+      >
+        ‹
+      </button>
+      <button
+        @click="nextSlide"
+        class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full"
+      >
+        ›
+      </button>
+
+      <!-- Dots -->
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <span
+          v-for="(page, index) in pages"
+          :key="index"
+          class="w-3 h-3 rounded-full cursor-pointer"
+          :class="index === currentIndex ? 'bg-black' : 'bg-gray-400'"
+          @click="goToSlide(index)"
+        ></span>
       </div>
     </div>
 
@@ -455,6 +513,16 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+
+const chunkArray = (arr, size) => {
+  const chunks = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunks.push(arr.slice(i, i + size));
+  }
+  return chunks;
+};
+
+const pages = computed(() => chunkArray(alcoholList.value, 4));
 
 const currentIndex = ref(0);
 
@@ -550,12 +618,13 @@ onMounted(() => {
   .carousel-slide p {
     font-size: 24px;
   }
-  .sets{
+  .sets {
     display: none;
   }
-  .sets_media{
+  .sets_media {
     display: block;
   }
+
 }
 .custom-shadow {
   box-shadow: 5px 5px 20px #00000040;
