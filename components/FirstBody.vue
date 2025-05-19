@@ -8,11 +8,11 @@
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
     >
       <div
-        class="carousel-slide relative min-w-full flex-shrink-0"
+        class="carousel-slide relative min-w-full "
         v-for="slide in bannerImg"
         :key="index"
       >
-        <img :src="slide.image" alt="Slide" class="w-[1200px] h-auto block" />
+        <img :src="slide.image" alt="Slide" class="carousel-img w-[1200px] h-auto block" />
       </div>
     </div>
 
@@ -105,7 +105,7 @@
     </div>
   </div>
 
-  <div class="max-w-[1200px] w-full mx-auto my-[20px]">
+  <!-- <div class="max-w-[1200px] w-full mx-auto my-[20px]">
     <div class="flex items-center gap-[36px]">
       <p class="text-[24px]">АКЦИИ</p>
       <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" />
@@ -114,7 +114,7 @@
       <img src="../assets/icons/i_21.png" alt="" class="w-[590px] h-auto" />
       <img src="../assets/icons/i_22.png" alt="" class="w-[590px] h-auto" />
     </div>
-  </div>
+  </div> -->
 
   <div class="max-w-[1200px] w-full mx-auto">
     <div class="flex items-center gap-[36px]">
@@ -793,5 +793,11 @@ onMounted(() => {
 <style scoped>
 .carousel-dots .active {
   background: white;
+}
+@media (max-width:1024px){
+  .carousel-img{
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
