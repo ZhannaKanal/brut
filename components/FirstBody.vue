@@ -430,9 +430,19 @@
         <hr class="flex-1 border-0 h-[0px] bg-[#D0D0D0]" />
       </div>
       <div class="brands grid grid-cols-5 place-items-center gap-[50px]">
-        <div v-for="brand in alcoholList.slice(0, 10)" :key="brand.id">
+        <div v-for="brand in visibleBrands" :key="brand.id">
           <img class="w-full" :src="brand.logo" alt="" />
         </div>
+      </div>
+      <div class="flex gap-[20px] justify-between items-center">
+        <hr class="flex-1 border-0 h-[1px] bg-[#D0D0D0]" >
+        <p
+          v-if="hasMore"
+          @click="loadMore"
+          class=""
+        >
+          показать еще
+        </p>
       </div>
     </div>
 
@@ -476,16 +486,45 @@ function goToSlide(index) {
   currentIndex.value = index;
 }
 
+// const alcoholList = ref([]);
+
+// const getAlcohols = async () => {
+//   try {
+//     const response = await axios.get("https://brut.kz/api/brands");
+//     alcoholList.value = response.data; // or adjust based on actual structure
+//   } catch (error) {
+//     console.error("Error fetching brands:", error);
+//   }
+// };
+
 const alcoholList = ref([]);
+const itemsPerPage = 10;
+const currentPage = ref(1);
 
 const getAlcohols = async () => {
   try {
     const response = await axios.get("https://brut.kz/api/brands");
-    alcoholList.value = response.data; // or adjust based on actual structure
+    alcoholList.value = response.data;
   } catch (error) {
     console.error("Error fetching brands:", error);
   }
 };
+
+onMounted(() => {
+  getAlcohols();
+});
+
+const visibleBrands = computed(() => {
+  return alcoholList.value.slice(0, currentPage.value * itemsPerPage);
+});
+
+const hasMore = computed(() => {
+  return visibleBrands.value.length < alcoholList.value.length;
+});
+
+function loadMore() {
+  currentPage.value++;
+}
 const bannerImg = ref([]);
 
 const getBanner = async () => {
@@ -567,6 +606,9 @@ onMounted(() => {
   }
 }
 .custom-shadow {
+  box-shadow: 5px 5px 20px #00000040;
+}
+.wine-grid :hover {
   box-shadow: 5px 5px 20px #00000040;
 }
 </style>
