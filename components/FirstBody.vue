@@ -486,17 +486,6 @@ function goToSlide(index) {
   currentIndex.value = index;
 }
 
-// const alcoholList = ref([]);
-
-// const getAlcohols = async () => {
-//   try {
-//     const response = await axios.get("https://brut.kz/api/brands");
-//     alcoholList.value = response.data; // or adjust based on actual structure
-//   } catch (error) {
-//     console.error("Error fetching brands:", error);
-//   }
-// };
-
 const alcoholList = ref([]);
 const itemsPerPage = 10;
 const currentPage = ref(1);
@@ -510,10 +499,6 @@ const getAlcohols = async () => {
   }
 };
 
-onMounted(() => {
-  getAlcohols();
-});
-
 const visibleBrands = computed(() => {
   return alcoholList.value.slice(0, currentPage.value * itemsPerPage);
 });
@@ -525,6 +510,7 @@ const hasMore = computed(() => {
 function loadMore() {
   currentPage.value++;
 }
+
 const bannerImg = ref([]);
 
 const getBanner = async () => {
